@@ -1,0 +1,330 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 2. v2.0 | 20110126
+  License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearfix {
+  overflow: auto;
+}
+
+* {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/*
+  ===================
+  Main Containers
+  ===================
+*/
+
+html {
+  background-color: #bdbdbd;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+}
+
+.outside-container {
+  background-color: #d3d3d3;
+  box-shadow: 0 0 20px #939393;
+  border-radius: 25px;
+  margin: auto;
+  margin-top: 3%;
+  width: 914px;
+  height: 637px;
+}
+
+/*
+  ===================
+  Rows & Columns
+  ===================
+*/
+
+.row-1-2 {
+  display: block;
+  height: 50%;
+  width: 101%;
+}
+
+.col-1 {
+  display: inline-block;
+  width: 43%;
+}
+
+.col-2 {
+  display: inline-block;
+  width: 40%;
+}
+
+/*
+  ===================
+  Pixel Canvas
+  ===================
+*/
+
+.pixel-canvas {
+  display: block;
+  position: relative;
+  top: 25px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  width: 864px;
+  height: 576px;
+}
+
+.pixel-in-canvas {
+  display: inline-block;
+  float: left;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border: 1px #d3d3d3 solid;
+}
+
+/*
+  ===================
+  Color Canvas
+  ===================
+*/
+
+.color-canvas {
+  display: block;
+  position: relative;
+  bottom: 75px;
+  margin-left: 25px;
+  margin-right: 25px;
+  width: 864px;
+  height: 100px;
+}
+
+.color {
+  display: inline-block;
+  margin-right: 1px;
+  height: 40.5px;
+  width: 40.5px;
+  border-radius: 20px;
+  border: 1px black solid;
+  background-color: white;
+}
+
+.color-box {
+  background-color: white;
+  display: inline-block;
+  width: 32.5%;
+  height: 85%;
+  border: 1px #bdbdbd solid;
+  border-radius: 7px;
+  box-shadow: 0 0 5px #939393;
+}
+
+/*
+  ===================
+  Text & Font Handling
+  ===================
+*/
+
+.text-box {
+  display: inline-block;
+  float: right;
+  width: 22%;
+  height: 100%;
+  text-align: justify;
+  padding-top: 12px;
+}
+
+h1 {
+  color: dark-grey;
+  font-size: 20px;
+  font-family: "Raleway", sans-serif;
+}
+
+/*
+  ===================
+  Manage Colors
+  ===================
+*/
+
+#red {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#peach {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#light-peach {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#tan {
+  background-color: tan;
+  border: 0px black solid;
+}
+
+#orange {
+  background-color: orange;
+  border: 0px black solid;
+}
+
+#light-tan {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#random {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#yellow {
+  background-color: yellow;
+  border: 0px black solid;
+}
+
+#plain {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#green {
+  background-color: green;
+  border: 0px black solid;
+}
+
+#lime {
+  background-color: lime;
+  border: 0px black solid;
+}
+
+#very-light-green {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#blue {
+  background-color: blue;
+  border: 0px black solid;
+}
+
+#light-blue {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#very-light-blue {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#purple {
+  background-color: purple;
+  border: 0px black solid;
+}
+
+#light-purple {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#plum {
+  background-color: plum;
+  border: 0px black solid;
+}
+
+#lighter-purple {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#grey {
+  background-color: grey;
+  border: 0px black solid;
+}
+
+#light-grey {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#mist {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#white {
+  background-color: white;
+  border: 1px black solid;
+}
+
+#brown {
+  background-color: brown;
+  border: 0px black solid;
+}
+
+#light-brown {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#lighter-brown {
+  background-color: red;
+  border: 0px black solid;
+}
+
+#lightest-brown {
+  background-color: red;
+  border: 0px black solid;
+}
