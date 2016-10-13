@@ -183,7 +183,7 @@ main {
 }
 
 h1 {
-  color: dark-grey;
+  color: #6D6968;
   font-size: 20px;
   font-family: "Raleway", sans-serif;
 }
@@ -200,131 +200,138 @@ h1 {
 }
 
 #peach {
-  background-color: red;
+  background-color: #ccae94;
   border: 0px black solid;
 }
 
 #light-peach {
-  background-color: red;
-  border: 0px black solid;
+  background-color: #ffc0cb;
+  border: .5px #FF69B4 solid;
 }
 
 #tan {
-  background-color: tan;
+  background-color: #737441;
   border: 0px black solid;
 }
 
 #orange {
-  background-color: orange;
+  background-color: #FF851B;
   border: 0px black solid;
 }
 
 #light-tan {
-  background-color: red;
+  background-color: #8b8b5f;
   border: 0px black solid;
 }
 
 #random {
-  background-color: red;
+  background-color: #456538;
   border: 0px black solid;
 }
 
 #yellow {
-  background-color: yellow;
+  background-color: #FFDC00;
   border: 0px black solid;
 }
 
 #plain {
-  background-color: red;
+  background-color: #6f725d;
   border: 0px black solid;
 }
 
 #green {
-  background-color: green;
+  background-color: #3D9970;
   border: 0px black solid;
 }
 
 #lime {
-  background-color: lime;
+  background-color: #2ECC40;
   border: 0px black solid;
 }
 
 #very-light-green {
-  background-color: red;
+  background-color: #01FF70;
   border: 0px black solid;
 }
 
+/* Navy */
 #blue {
-  background-color: blue;
+  background-color: #001f3f;
   border: 0px black solid;
 }
 
+/* Blue */
 #light-blue {
-  background-color: red;
+  background-color: #0074D9;
   border: 0px black solid;
 }
 
+/* Aqua */
 #very-light-blue {
-  background-color: red;
+  background-color: #7FDBFF;
   border: 0px black solid;
 }
 
 #purple {
-  background-color: purple;
+  background-color: #B10DC9;
   border: 0px black solid;
 }
 
+/* Fuchsia */
 #light-purple {
-  background-color: red;
+  background-color: #F012BE;
   border: 0px black solid;
 }
 
+/* Maroon */
 #plum {
-  background-color: plum;
+  background-color: #85144b;
   border: 0px black solid;
 }
 
 #lighter-purple {
-  background-color: red;
+  background-color: #94679c;
   border: 0px black solid;
 }
 
 #grey {
-  background-color: grey;
+  background-color: #808080;
   border: 0px black solid;
 }
 
 #light-grey {
-  background-color: red;
+  background-color: #AAAAAA;
   border: 0px black solid;
 }
 
+/* Silver */
 #mist {
-  background-color: red;
-  border: 0px black solid;
+  background-color: #DDDDDD;
+  border: .5px #808080 solid;
 }
 
 #white {
-  background-color: white;
-  border: 1px black solid;
+  background-color: #FFFFFF;
+  border: .5px #808080 solid;
 }
 
+/* Black */
 #brown {
-  background-color: brown;
+  background-color: #111111;
   border: 0px black solid;
 }
 
 #light-brown {
-  background-color: red;
+  background-color: #543b22;
   border: 0px black solid;
 }
 
 #lighter-brown {
-  background-color: red;
+  background-color: #654f39;
   border: 0px black solid;
 }
 
 #lightest-brown {
-  background-color: red;
+  background-color: #6e6567;
   border: 0px black solid;
 }
