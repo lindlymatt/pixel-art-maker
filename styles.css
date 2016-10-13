@@ -48,11 +48,15 @@ table {
   border-spacing: 0;
 }
 
-.clearfix {
-  overflow: auto;
+.clearfix:after {
+  content: ' ';
+  display: table;
+  clear: both;
 }
 
-* {
+*,
+*:before,
+*:after {
     -webkit-box-sizing: border-box;
        -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -60,7 +64,7 @@ table {
 
 /*
   ===================
-  Main Containers
+  Containers
   ===================
 */
 
@@ -73,14 +77,55 @@ main {
   height: 100vh;
 }
 
-.outside-container {
+.main-container {
   background-color: #d3d3d3;
   box-shadow: 0 0 20px #939393;
   border-radius: 25px;
   margin: auto;
-  margin-top: 3%;
+  margin-top: 5%;
+  margin-bottom: 5%;
   width: 914px;
-  height: 637px;
+}
+
+.pixel-canvas {
+  display: inline-block;
+  margin: 25px;
+  max-width: 864px;
+}
+
+.palet-container {
+  display: inline-block;
+  padding: 20px;
+  margin: 3%;
+  margin-top: 0;
+  max-width: 864px;
+  border: 1px #bdbdbd dashed;
+  box-shadow: 0 0 10px #939393;
+  border-radius: 25px;
+}
+
+.tool-container {
+  display: inline-block;
+  padding: 20px;
+  margin: 3%;
+  margin-top: 0;
+  width: 864px;
+  border: 1px #bdbdbd dashed;
+  box-shadow: 0 0 10px #939393;
+  border-radius: 25px;
+}
+
+.current-color-container {
+  display: inline-block;
+  background-color: yellow;
+  margin: 3%;
+  margin-top: 0;
+  width: 864px;
+  height: 100px;
+  border: 1px #bdbdbd dashed;
+  box-shadow: 0 0 10px #939393;
+  border-radius: 25px;
+  text-align: center;
 }
 
 /*
@@ -91,61 +136,64 @@ main {
 
 .row-1-2 {
   display: block;
-  height: 50%;
-  width: 101%;
+  width: 100%;
 }
 
-.col-1 {
+.col-3-4 {
   display: inline-block;
-  width: 43%;
+  width: 75%;
 }
 
-.col-2 {
+.col-1-2 {
   display: inline-block;
-  width: 40%;
+  width: 50%;
+}
+
+.col-1-4 {
+  display: inline-block;
+  width: 24%;
+  text-align: center;
 }
 
 /*
   ===================
-  Pixel Canvas
+  Text Management
   ===================
 */
 
-.pixel-canvas {
-  display: block;
-  position: relative;
-  top: 25px;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-bottom: 25px;
-  width: 864px;
-  height: 576px;
+.palet-header {
+  background-color: #d3d3d3;
+  color: #808080;
+  font-size: 35px;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  margin-top: -37px;
+  margin-right: -25px;
 }
 
-.pixel-in-canvas {
-  display: inline-block;
-  float: left;
-  width: 16px;
-  height: 16px;
-  background-color: white;
-  border: 1px #d3d3d3 solid;
+.tool-header {
+  background-color: #d3d3d3;
+  color: #808080;
+  font-size: 35px;
+  font-family: "Raleway", sans-serif;
+  position: absolute;
+  margin-top: -37px;
+  margin-left: 700px;
+}
+
+.current-color-header {
+  position: relative;
+  color: black;
+  font-size: 57px;
+  font-family: "Raleway", sans-serif;
+  margin-top: 20px;
 }
 
 /*
-  ===================
-  Color Canvas
-  ===================
+  =====================
+  Color Palet Fillers
+  =====================
 */
-
-.color-canvas {
-  display: block;
-  position: relative;
-  bottom: 75px;
-  margin-left: 25px;
-  margin-right: 25px;
-  width: 864px;
-  height: 100px;
-}
 
 .color {
   display: inline-block;
@@ -157,35 +205,21 @@ main {
   background-color: white;
 }
 
-.color-box {
-  background-color: white;
-  display: inline-block;
-  width: 32.5%;
-  height: 85%;
-  border: 1px #bdbdbd solid;
-  border-radius: 7px;
-  box-shadow: 0 0 5px #939393;
-}
-
 /*
-  ===================
-  Text & Font Handling
-  ===================
+  =====================
+  Tool Box Fillers
+  =====================
 */
 
-.text-box {
+.tool {
   display: inline-block;
-  float: right;
-  width: 22%;
-  height: 100%;
-  text-align: justify;
-  padding-top: 12px;
-}
-
-h1 {
-  color: #6D6968;
-  font-size: 20px;
-  font-family: "Raleway", sans-serif;
+  height: 100px;
+  margin-right: 5px;
+  margin-top: 5px;
+  width: 100px;
+  border-radius: 20px;
+  border: 1px black solid;
+  background-color: white;
 }
 
 /*
