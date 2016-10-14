@@ -9,7 +9,8 @@ var paintbrushButton = document.getElementById('paintbrush');
 var eraserButton = document.getElementById('eraser');
 var newRowButton = document.getElementById('row-button');
 var newColorButton = document.getElementById('color-button');
-var colorPallette = document.getElementById('last-row');
+var saveImageButton = document.getElementById('save-button');
+var colorPallette = document.querySelector('.palet-container');
 var newColor = '';
 var currentColor = '';
 
@@ -25,6 +26,23 @@ function createPixels() {
     pixelSquare.style.backgroundColor = 'white';
     pixelSquare.style.border = '1px #d3d3d3 solid';
     pixelSquare.className = 'pixel-square';
+  }
+}
+
+function refreshAll() {
+  for(var i = 0; i < allColors.length; i++) {
+    allColors[i].addEventListener("click", function(event) {
+      currentColor = '#' + event.target.id;
+      currentColorBox.style.backgroundColor = currentColor;
+      document.body.style.cursor = "url('paintb-cursor.png'), default";
+      currentColorText.innerText = "CURRENT COLOR ON BRUSH";
+    });
+  }
+
+  for(var j = 0; j < allDivs.length; j++) {
+    allDivs[j].addEventListener("click", function(event) {
+      event.target.style.backgroundColor = currentColor;
+    });
   }
 }
 
@@ -82,11 +100,8 @@ newRowButton.addEventListener("click", function() {
     pixelSquare.style.border = '1px #d3d3d3 solid';
     pixelSquare.className = 'pixel-square';
   }
-  for(var j = 0; j < allDivs.length; j++) {
-    allDivs[j].addEventListener("click", function(event) {
-      event.target.style.backgroundColor = currentColor;
-    });
-  }
+
+  refreshAll();
 });
 
 // Pops Up New Color Window
@@ -103,42 +118,20 @@ newColorButton.addEventListener("click", function() {
     newColorNoHashtag += newColor[q];
   }
 
-  console.log(newColorNoHashtag);
   var newColorCircle = document.createElement('DIV');
   colorPallette.appendChild(newColorCircle);
 
   newColorCircle.style.display = 'inline-block';
-  newColorCircle.style.marginRight = '1px';
+  newColorCircle.style.float = 'left';
+  newColorCircle.style.marginRight = '5px';
   newColorCircle.style.height = '40.5px';
   newColorCircle.style.width = '40.5px';
-  newColorCircle.style.id = newColorNoHashtag;
+  newColorCircle.id = newColorNoHashtag;
   newColorCircle.style.backgroundColor = newColor;
   newColorCircle.style.border = '0px #bdbdbd solid';
   newColorCircle.style.borderRadius = '20px';
   newColorCircle.className = 'color';
+  console.log(newColorCircle);
 
-  for(var i = 0; i < allColors.length; i++) {
-    allColors[i].addEventListener("click", function(event) {
-      currentColor = '#' + event.target.id;
-      currentColorBox.style.backgroundColor = currentColor;
-      document.body.style.cursor = "url('paintb-cursor.png'), default";
-      currentColorText.innerText = "CURRENT COLOR ON BRUSH";
-    });
-  }
-
-  for(var j = 0; j < allDivs.length; j++) {
-    allDivs[j].addEventListener("click", function(event) {
-      event.target.style.backgroundColor = currentColor;
-    });
-  }
+  refreshAll();
 });
-
-// Color Changing Code Information:
-
-// var theInput = document.getElementById("favcolor");
-// var theColor = theInput.value;
-// theInput.addEventListener("input", function() {
-//
-// //do something with "theColor" here.
-//
-// }, false);

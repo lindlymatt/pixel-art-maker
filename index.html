@@ -10,10 +10,11 @@
     <main>
       <section class="main-container">
         <section class="pixel-canvas">
+          <img id="mirror" class="canvas_mirror" />
         </section>
         <section class="palet-container">
           <h1 class="palet-header">COLORS</h1>
-          <section class="row-1-2">
+          <!-- <section class="row-1-2"> -->
             <div class="color" id="BF3E16"></div>
             <div class="color" id="FF4B14"></div>
             <div class="color" id="E4572E"></div>
@@ -32,8 +33,8 @@
             <div class="color" id="FFB2C5"></div>
             <div class="color" id="8DA7BE"></div>
             <div class="color" id="CDE2F4"></div>
-          </section>
-          <section class="row-1-2" id="last-row">
+          <!-- </section> -->
+          <!-- <section class="row-1-2" id="last-row"> -->
             <div class="color" id="4F6170"></div>
             <div class="color" id="2C3C49"></div>
             <div class="color" id="313715"></div>
@@ -52,24 +53,29 @@
             <div class="color" id="d3d3d3"></div>
             <div class="color" id="d7d7d7"></div>
             <div class="color" id="a2a2a2"></div>
-          </section>
+          <!-- </section> -->
         </section>
         <section class="tool-container">
           <h1 class="tool-header">TOOLS</h1>
-          <section class="col-1-4">
+          <section class="col-1-5">
             <div class="tool" id="paintbrush"><img src="paintbrush.png"></div>
           </section>
-          <section class="col-1-4">
+          <section class="col-1-5">
             <div class="tool" id="eraser"><img src="eraser.png"></div>
           </section>
-          <section class="col-1-4">
+          <section class="col-1-5">
             <div class="tool">
               <button class="add-new-pixel" id="row-button">Add Row</button>
             </div>
           </section>
-          <section class="col-1-4">
+          <section class="col-1-5">
             <div class="tool">
               <button class="add-new-color" id="color-button">Add Color</button>
+            </div>
+          </section>
+          <section class="col-1-5">
+            <div class="tool">
+              <button class="save-the-img" id="save-button">Save Image</button>
             </div>
           </section>
         </section>
