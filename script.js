@@ -9,7 +9,7 @@ var paintbrushButton = document.getElementById('paintbrush');
 var eraserButton = document.getElementById('eraser');
 var newRowButton = document.getElementById('row-button');
 var newColorButton = document.getElementById('color-button');
-var saveImageButton = document.getElementById('save-button');
+var clearImageButton = document.getElementById('clear-button');
 var colorPallette = document.querySelector('.palet-container');
 var newColor = '';
 var currentColor = '';
@@ -53,7 +53,6 @@ createPixels();
 for(var i = 0; i < allColors.length; i++) {
   allColors[i].addEventListener("click", function(event) {
     currentColor = '#' + event.target.id;
-    console.log(currentColor);
     currentColorBox.style.backgroundColor = currentColor;
     document.body.style.cursor = "url('paintb-cursor.png'), default";
     currentColorText.innerText = "CURRENT COLOR ON BRUSH";
@@ -68,7 +67,7 @@ for(var j = 0; j < allDivs.length; j++) {
   });
   allDivs[j].addEventListener("dragover", function(event) {
     event.target.style.backgroundColor = currentColor;
-  })
+  });
 }
 
 // Paintbrush Image/Tool Functionality:
@@ -134,7 +133,18 @@ newColorButton.addEventListener("click", function() {
   newColorCircle.style.border = '0px #bdbdbd solid';
   newColorCircle.style.borderRadius = '20px';
   newColorCircle.className = 'color';
-  console.log(newColorCircle);
 
   refreshAll();
 });
+
+// Clear Button Functionality
+
+clearImageButton.addEventListener("click", function() {
+  for(var i = 0; i < allDivs.length; i++) {
+    allDivs[i].style.backgroundColor = 'white';
+  }
+
+  refreshAll();
+});
+
+alert('Welcome to the Pixeltopia! If you have gotten this far, then you are off to a good start. You can click the colors and tools below to help you draw wonderful images. Click & drag to color over multiple boxes at once!');

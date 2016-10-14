@@ -218,11 +218,12 @@ main {
   border-radius: 20px;
 }
 
-.save-the-img {
+.clear-the-img {
   position: relative;
   display: inline-block;
   float: left;
-  color: #FF4B14;
+  color: black;
+  background-color: #FF4B14;
   font-size: 35px;
   font-family: "Raleway", sans-serif;
   border-radius: 20px;
