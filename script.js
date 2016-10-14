@@ -31,18 +31,31 @@ function createPixels() {
 
 function refreshAll() {
   for(var i = 0; i < allColors.length; i++) {
-    allColors[i].addEventListener("click", function(event) {
+    allColors[i].addEventListener("mousedown", function(event) {
       currentColor = '#' + event.target.id;
       currentColorBox.style.backgroundColor = currentColor;
       document.body.style.cursor = "url('paintb-cursor.png'), default";
       currentColorText.innerText = "CURRENT COLOR ON BRUSH";
     });
+    for(var j = 0; j < allDivs.length; j++) {
+      allDivs[j].addEventListener("mouseover", function(event) {
+        event.target.style.backgroundColor = currentColor;
+      });
+    }
   }
 
-  for(var j = 0; j < allDivs.length; j++) {
-    allDivs[j].addEventListener("click", function(event) {
-      event.target.style.backgroundColor = currentColor;
+  for(var i = 0; i < allColors.length; i++) {
+    allColors[i].addEventListener("mouseup", function(event) {
+      currentColor = '#' + event.target.id;
+      currentColorBox.style.backgroundColor = currentColor;
+      document.body.style.cursor = "url('paintb-cursor.png'), default";
+      currentColorText.innerText = "CURRENT COLOR ON BRUSH";
     });
+    for(var j = 0; j < allDivs.length; j++) {
+      allDivs[j].removeEventListener("mouseover", function(event) {
+        event.target.style.backgroundColor = currentColor;
+      });
+    }
   }
 }
 
@@ -51,7 +64,7 @@ createPixels();
 // Color Pallete Manipulation:
 
 for(var i = 0; i < allColors.length; i++) {
-  allColors[i].addEventListener("click", function(event) {
+  allColors[i].addEventListener("mousedown", function(event) {
     currentColor = '#' + event.target.id;
     currentColorBox.style.backgroundColor = currentColor;
     document.body.style.cursor = "url('paintb-cursor.png'), default";
@@ -62,17 +75,17 @@ for(var i = 0; i < allColors.length; i++) {
 // Adds Event Listeners to Canvas:
 
 for(var j = 0; j < allDivs.length; j++) {
-  allDivs[j].addEventListener("click", function(event) {
+  allDivs[j].addEventListener("mousedown", function(event) {
     event.target.style.backgroundColor = currentColor;
   });
-  allDivs[j].addEventListener("dragover", function(event) {
+  allDivs[j].addEventListener("mousedown", function(event) {
     event.target.style.backgroundColor = currentColor;
   });
 }
 
 // Paintbrush Image/Tool Functionality:
 
-paintbrushButton.addEventListener("click", function() {
+paintbrushButton.addEventListener("mousedown", function() {
   document.body.style.cursor = "url('paintb-cursor.png'), default";
   currentColorText.innerText = "CURRENT COLOR ON BRUSH";
   currentColorBox.style.backgroundColor = 'white';
@@ -80,7 +93,7 @@ paintbrushButton.addEventListener("click", function() {
 
 // Eraser Image/Tool Functionality:
 
-eraserButton.addEventListener("click", function() {
+eraserButton.addEventListener("mousedown", function() {
   document.body.style.cursor = "url('eraser-cursor.png'), default";
   currentColorText.innerText = "ERASER";
   currentColorBox.style.backgroundColor = 'white';
@@ -89,7 +102,7 @@ eraserButton.addEventListener("click", function() {
 
 // New Row Functionality (56 New Divs):
 
-newRowButton.addEventListener("click", function() {
+newRowButton.addEventListener("mousedown", function() {
   for(var i = 0; i < 56; i++) {
     var pixelSquare = document.createElement('DIV');
     canvas.appendChild(pixelSquare);
@@ -108,9 +121,9 @@ newRowButton.addEventListener("click", function() {
 
 // Pops Up New Color Window
 
-newColorButton.addEventListener("click", function() {
+newColorButton.addEventListener("mousedown", function() {
   newColor = '';
-  while(newColor.length !== 7) {
+  while(newColor.length !== 7 && newColor === 'exit') {
     newColor = window.prompt("Please enter a HEX Color Code here, please include (#) before the 6 digit code, type 'exit' to not enter a code, unfortunately, at this time, you cannot set a HEX Color Code with a number as the first character:","Example Error: #567102, Correct: #A28723");
   }
 
@@ -139,7 +152,7 @@ newColorButton.addEventListener("click", function() {
 
 // Clear Button Functionality
 
-clearImageButton.addEventListener("click", function() {
+clearImageButton.addEventListener("mousedown", function() {
   for(var i = 0; i < allDivs.length; i++) {
     allDivs[i].style.backgroundColor = 'white';
   }
