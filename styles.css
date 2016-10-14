@@ -118,7 +118,6 @@ main {
 
 .current-color-container {
   display: inline-block;
-  background-color: yellow;
   margin: 3%;
   margin-top: 0;
   width: 864px;
@@ -191,11 +190,12 @@ main {
 }
 
 .current-color-header {
-  position: relative;
-  color: black;
-  font-size: 57px;
+  /*background-color: #d3d3d3;*/
+  color: #808080;
+  font-size: 45px;
   font-family: "Raleway", sans-serif;
-  margin-top: 20px;
+  position: relative;
+  margin-top: 25px;
 }
 
 .add-new-pixel {
@@ -242,7 +242,7 @@ img {
 
 /*
   =====================
-  Color Palet Fillers
+  Color Palet & Container Fillers
   =====================
 */
 
@@ -254,6 +254,15 @@ img {
   border-radius: 20px;
   border: 0px #bdbdbd solid;
   background-color: white;
+}
+
+.pixel-square {
+  display: inline-block;
+  float: left;
+  width: 15.4px;
+  height: 15.4px;
+  background-color: white;
+  border: 1px #d3d3d3 solid;
 }
 
 /*
@@ -290,7 +299,7 @@ img {
 #AF5A41 {
   background-color: #AF5A41;
 }
-#C394053 {
+[id='394053'] {
   background-color: #394053;
 }
 [id='677AB5'] {
