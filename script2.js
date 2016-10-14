@@ -34,8 +34,8 @@ function pickColor() {
 function createCanvasListeners() {
   for(var i = 0; i < allDivs.length; i++) {
     allDivs[i].addEventListener("mousedown", function(event) {
-    event.target.style.backgroundColor = currentColor;
-    event.target.style.border = '0px';
+      event.target.style.backgroundColor = currentColor;
+      event.target.style.border = '0px';
       for(var j = 0; j < allDivs.length; j++) {
         allDivs[j].addEventListener("mouseover", dasHandler);
       }
@@ -69,6 +69,22 @@ function createToolKit() {
     currentColorText.innerText = "ERASER";
     currentColorBox.style.backgroundColor = 'white';
     currentColor = 'white';
+    for(var i = 0; i < allDivs.length; i++) {
+      allDivs[i].addEventListener("mousedown", function(event) {
+        event.target.style.backgroundColor = currentColor;
+        event.target.style.border = '1px #d3d3d3 solid';
+        for(var j = 0; j < allDivs.length; j++) {
+          allDivs[j].addEventListener("mouseover", dasHandler);
+        }
+      });
+    }
+    for(var k = 0; k < allDivs.length; k++) {
+      allDivs[k].addEventListener("mouseup", function(event) {
+        for(var l = 0; l < allDivs.length; l++) {
+          allDivs[l].removeEventListener("mouseover", dasHandler);
+        }
+      });
+    }
     totalListenerRefresh();
   });
 
