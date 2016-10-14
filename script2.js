@@ -98,10 +98,10 @@ function createToolKit() {
   });
 
   newColorButton.addEventListener("click", function() {
-    var userColor = window.prompt("Please enter a HEX Color Code here (do not include the #):", "Ex. A28723");
+    var userColor = window.prompt("Please enter a HEX Color Code here (do not include the #):", "Ex. FF6600");
     var colorPallette = document.querySelector('.palet-container');
     if (userColor.length !== 6) {
-      userColor = window.prompt("ERROR! INCORRECT VALUE ENTERED! Please enter a HEX Color Code here (do not include the #), enter 'exit' to close':", "Ex. A28723");
+      userColor = window.prompt("ERROR! INCORRECT VALUE ENTERED! Please enter a HEX Color Code here (do not include the #), enter 'exited' to close':", "Ex. FF6600");
     }
     else {
       var newColorCircle = document.createElement('DIV');
@@ -127,8 +127,6 @@ function createToolKit() {
 function dasHandler(event) {
   event.target.style.backgroundColor = currentColor;
   event.target.style.border = '0px';
-  // event.target.style.height = '15.9px';
-  // event.target.style.width = '15.9px';
 }
 
 function totalListenerRefresh() {
