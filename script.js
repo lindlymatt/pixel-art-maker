@@ -66,6 +66,9 @@ for(var j = 0; j < allDivs.length; j++) {
   allDivs[j].addEventListener("click", function(event) {
     event.target.style.backgroundColor = currentColor;
   });
+  allDivs[j].addEventListener("dragover", function(event) {
+    event.target.style.backgroundColor = currentColor;
+  })
 }
 
 // Paintbrush Image/Tool Functionality:
